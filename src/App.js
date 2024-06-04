@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import img1 from './img/ai-art.webp';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <header>
+    <nav>
+      <ul>
+        <li type="none">Home</li>
+        <li type="none">About</li>
+        <li type="none">Contact Us</li>
+      </ul>
+    </nav>
+    <hr />
+    <p className="lorem1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt laudantium velit placeat labore magnam dolorum debitis similique aliquid atque repellendus vel sapiente totam et impedit ex, eos pariatur deleniti.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquam quos magni minima harum animi iure dolorem, et voluptatum nam, a illo nihil pariatur explicabo quia recusandae dolor iusto beatae.</p>
+
+    <img src="https://cdn.clickworker.com/wp-content/uploads/2022/09/BenefitsofAI.webp" alt="" />
+
+    <p className="lorem1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt laudantium velit placeat labore magnam dolorum debitis similique aliquid atque repellendus vel sapiente totam et impedit ex, eos pariatur deleniti.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquam quos magni minima harum animi iure dolorem, et voluptatum nam, a illo nihil pariatur explicabo quia recusandae dolor iusto beatae.</p>
+
+    <img src={img1} alt="img"/>
+
+    <p className="lorem1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt laudantium velit placeat labore magnam dolorum debitis similique aliquid atque repellendus vel sapiente totam et impedit ex, eos pariatur deleniti.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquam quos magni minima harum animi iure dolorem, et voluptatum nam, a illo nihil pariatur explicabo quia recusandae dolor iusto beatae.</p>
+   </header>
+   </>
   );
 }
 
