@@ -1,10 +1,12 @@
 import './App.css';
 import img1 from './img/ai-art.webp';
+let name= "SIT";
 
 function App() {
   return (
    <>
    <header>
+    <h1 className='SIT'>{name}</h1>
     <nav>
       <ul>
         <li type="none">Home</li>

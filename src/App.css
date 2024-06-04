@@ -1,3 +1,8 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .lorem1{
   color: goldenrod;
   background-color: black;
@@ -24,4 +29,11 @@ nav ul{
 }
 img{
   width: 100%;
+}
+.SIT{
+  text-align: center;
+  font-family: sans-serif;
+  color: goldenrod;
+  background-color: black;
+  margin: 10px;
 }
