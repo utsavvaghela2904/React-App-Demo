@@ -5,8 +5,8 @@ import TextForm from './components/TextForm.js';
 function App() {
   return (
     <>
-      <Navbar title="SIT" aboutText="Contact Us"/>
-      <TextForm heading="Enter Your Text To Analyse Below"/>
+      <Navbar title="SIT" aboutText="Contact Us" />
+      <TextForm heading="Enter Your Text To Analyse Below" />
     </>
   );
 }
