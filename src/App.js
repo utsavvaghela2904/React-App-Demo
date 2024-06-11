@@ -1,32 +1,32 @@
+import { useState } from 'react';
 import './App.css';
-import img1 from './img/ai-art.webp';
-let name= "SIT";
+import Navbar from './components/Navbar.js';
+import TextForm from './components/TextForm.js';
 
 function App() {
+  const [mode, setMode] = useState('light');
+
+  const [btnText, newbtnText] = useState('Enble Dark Mode');
+
+  const toggleMode = () => {
+    if (mode === 'light') {
+      setMode('dark')
+      document.body.style.background = 'black'
+      document.body.style.color = 'white'
+      newbtnText("Enble Light Mode")
+    } else {
+      setMode('light')
+      document.body.style.color = 'black'
+      document.body.style.background = 'white'
+      newbtnText("Enble Dark Mode")
+    }
+  }
   return (
-   <>
-   <header>
-    <h1 className='SIT'>{name}</h1>
-    <nav>
-      <ul>
-        <li type="none">Home</li>
-        <li type="none">About</li>
-        <li type="none">Contact Us</li>
-      </ul>
-    </nav>
-    <hr />
-    <p className="lorem1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt laudantium velit placeat labore magnam dolorum debitis similique aliquid atque repellendus vel sapiente totam et impedit ex, eos pariatur deleniti.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquam quos magni minima harum animi iure dolorem, et voluptatum nam, a illo nihil pariatur explicabo quia recusandae dolor iusto beatae.</p>
-
-    <img src="https://cdn.clickworker.com/wp-content/uploads/2022/09/BenefitsofAI.webp" alt="" />
-
-    <p className="lorem1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt laudantium velit placeat labore magnam dolorum debitis similique aliquid atque repellendus vel sapiente totam et impedit ex, eos pariatur deleniti.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquam quos magni minima harum animi iure dolorem, et voluptatum nam, a illo nihil pariatur explicabo quia recusandae dolor iusto beatae.</p>
-
-    <img src={img1} alt="img"/>
-
-    <p className="lorem1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nesciunt laudantium velit placeat labore magnam dolorum debitis similique aliquid atque repellendus vel sapiente totam et impedit ex, eos pariatur deleniti.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquam quos magni minima harum animi iure dolorem, et voluptatum nam, a illo nihil pariatur explicabo quia recusandae dolor iusto beatae.</p>
-   </header>
-   </>
+    <>
+      <Navbar title="SIT" aboutText="Contact  Us" mode={mode} toggleMode={toggleMode} btnText={btnText} />
+      <TextForm heading="Enter Text To Analyse Below" mode={mode} toggleMode={toggleMode} />
+    </>
   );
 }
 
-export default App;
+export default App; 
