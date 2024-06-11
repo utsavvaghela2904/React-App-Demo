@@ -29,7 +29,7 @@ export default function TextForm(props) {
     }
 
     const HandleClear = () => {
-        let newText = "";
+        let newText = "";  
         setText(newText);
     }
 
@@ -38,7 +38,7 @@ export default function TextForm(props) {
         newText.select();
         navigator.clipboard.writeText(newText.value);
     }
-
+   
     const HandleRemoveSpace = () => {
        let newText = text.split(/[ ] + /);
        setText(newText.join(" "));
