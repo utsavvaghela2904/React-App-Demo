@@ -6,9 +6,7 @@ import TextForm from './components/TextForm.js';
 
 function App() {
   const [mode, setMode] = useState('light');
-
-  const [btnText, newbtnText] = useState('Enble Dark Mode');
-
+  const [btnText, mybtn] = useState ("Enable Dark Mode");
   const [alert, setAlert] = useState (null);
 
   const showAlert = (message, type) => {
@@ -20,19 +18,22 @@ function App() {
       setAlert(null);
     }, 1500);
   }
+
+
   const toggleMode = () => {
     if (mode === 'light') {
-      setMode('dark')
-      document.body.style.background = 'black';
-      document.body.style.color = 'white';
-      newbtnText("Enble Light Mode");
-      newbtnText("Dark Mode Has Ben Enble", "succes");
+      setMode('dark');
+      document.body.style.background = "black";
+      document.body.style.color = "white";
+      mybtn("Enable Light Mode");
+      showAlert("Dark Mode Has Been Enable" , "success")
     } else {
-      setMode('light')
-      document.body.style.color = 'black'
-      document.body.style.background = 'white'
-      newbtnText("Enble Dark Mode")
-      newbtnText("Light Mode Has Ben Enble", "succes");
+      setMode('light');
+      document.body.style.background = "white";
+      document.body.style.color = "black";
+      mybtn("Enable Dark Mode");
+      showAlert("Light Mode Has Been Enable" , "success")
+
     }
   }
   return (
